@@ -9,11 +9,11 @@ use Api\app\Rules\UniqueEmailRule as UniqueEmailRule;
 
 class UsersController
 {
-    /*
-        Expose functionality to create, read, update and delete (CRUD) users and hospitals.
-        Expose functionality to list users and the ability to search them by workplace and title.
-    */
-
+    /**
+     * Select all Users and search by first name, last name and workplace
+     *
+     * @return string JSON
+     */
     public function index()
     {
         $user = User::query();
@@ -49,6 +49,13 @@ class UsersController
         response()->json($user->get());
     }
 
+    /**
+     * Shows specific user
+     *
+     * @param int $id
+     *
+     * @return string JSON
+     */
     public function show($id)
     {
         $user = User::where('id', '=', $id)->first();
@@ -56,6 +63,11 @@ class UsersController
         is_null($user) ? response()->json([]) : response()->json($user);
     }
 
+    /**
+     * Creates a user
+     *
+     * @return string JSON
+     */
     public function store()
     {
         $data = input()->all([
@@ -121,6 +133,13 @@ class UsersController
         response()->json(['User is created']);
     }
 
+    /**
+     * Update a specific user
+     *
+     * @param int $id
+     *
+     * @return string JSON
+     */
     public function update($id)
     {
         $user = User::where('id', '=', (int)$id)->first();
@@ -190,6 +209,13 @@ class UsersController
         response()->json(['User not found']);
     }
 
+    /**
+     * Deteles a User
+     *
+     * @param int $id
+     *
+     * @return string JSON
+     */
     public function destroy($id)
     {
         $user = User::where('id', '=', (int)$id)->first();

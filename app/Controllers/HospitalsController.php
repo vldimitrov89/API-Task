@@ -7,6 +7,11 @@ use Rakit\Validation\Validator;
 
 class HospitalsController
 {
+    /**
+     * Select all Hospitals and sort by employees  count
+     *
+     * @return string JSON
+     */
     public function index()
     {
         $hospital = Hospital::query();
@@ -18,6 +23,13 @@ class HospitalsController
         response()->json($hospital->get());
     }
 
+    /**
+     * Show a specific hospital
+     *
+     * @param int $id
+     *
+     * @return string JSON
+     */
     public function show($id)
     {
         $hospital = Hospital::where('id', '=', $id)->first();
@@ -25,6 +37,11 @@ class HospitalsController
         !is_null($hospital) ? response()->json($hospital) : response()->json([]);
     }
 
+    /**
+     * Create a new hospital
+     *
+     * @return string JSON
+     */
     public function store()
     {
         $data = input()->all([
@@ -58,6 +75,13 @@ class HospitalsController
         response()->json(['Hospital is created']);
     }
 
+    /**
+     * Update a specific hospital
+     *
+     * @param int $id
+     *
+     * @return string JSON
+     */
     public function update($id)
     {
         $hospital = Hospital::where('id', '=', (int)$id)->first();
@@ -96,6 +120,11 @@ class HospitalsController
         response()->json(['Hospital is not found']);
     }
 
+    /**
+     * Delete a hospital
+     *
+     * @return string JSON
+     */
     public function destroy($id)
     {
         $hospital = Hospital::where('id', '=', $id)->first();
