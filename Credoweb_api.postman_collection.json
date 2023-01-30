@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "0ea2c110-7187-4801-aad4-873b86ae114d",
+		"name": "Credoweb_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16485979"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://credoweb_task.test/users",
+							"protocol": "http",
+							"host": [
+								"credoweb_task",
+								"test"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Specific User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://credoweb_task.test/users/2",
+							"protocol": "http",
+							"host": [
+								"credoweb_task",
+								"test"
+							],
+							"path": [
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://credoweb_task.test/users/create?email=test@test.com&first_name=Vladimir&last_name=Dimitrov&type=1",
+							"protocol": "http",
+							"host": [
+								"credoweb_task",
+								"test"
+							],
+							"path": [
+								"users",
+								"create"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "test@test.com"
+								},
+								{
+									"key": "first_name",
+									"value": "Vladimir"
+								},
+								{
+									"key": "last_name",
+									"value": "Dimitrov"
+								},
+								{
+									"key": "type",
+									"value": "1"
+								},
+								{
+									"key": "workplace_id",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://credoweb_task.test/users/update/2?email=test1@test1.com&first_name=Ivan&last_name=Ivanov&type=1",
+							"protocol": "http",
+							"host": [
+								"credoweb_task",
+								"test"
+							],
+							"path": [
+								"users",
+								"update",
+								"2"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "test1@test1.com"
+								},
+								{
+									"key": "first_name",
+									"value": "Ivan"
+								},
+								{
+									"key": "last_name",
+									"value": "Ivanov"
+								},
+								{
+									"key": "type",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://credoweb_task.test/users/delete/10",
+							"protocol": "http",
+							"host": [
+								"credoweb_task",
+								"test"
+							],
+							"path": [
+								"users",
+								"delete",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Hospitals",
+			"item": [
+				{
+					"name": "Get All Hospitals",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://credoweb_task.test/hospitals",
+							"protocol": "http",
+							"host": [
+								"credoweb_task",
+								"test"
+							],
+							"path": [
+								"hospitals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Specific Hospital",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://credoweb_task.test/hospitals/2",
+							"protocol": "http",
+							"host": [
+								"credoweb_task",
+								"test"
+							],
+							"path": [
+								"hospitals",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Hospital",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://credoweb_task.test/hospitals/create?name=Test Hospital&address=This is a random address&phone=0889000000",
+							"protocol": "http",
+							"host": [
+								"credoweb_task",
+								"test"
+							],
+							"path": [
+								"hospitals",
+								"create"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Test Hospital"
+								},
+								{
+									"key": "address",
+									"value": "This is a random address"
+								},
+								{
+									"key": "phone",
+									"value": "0889000000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Hospital",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://credoweb_task.test/hospitals/update/4?name=Test Hospital updated&address=This is a random address&phone=0889000000",
+							"protocol": "http",
+							"host": [
+								"credoweb_task",
+								"test"
+							],
+							"path": [
+								"hospitals",
+								"update",
+								"4"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Test Hospital updated"
+								},
+								{
+									"key": "address",
+									"value": "This is a random address"
+								},
+								{
+									"key": "phone",
+									"value": "0889000000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Hospital",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://credoweb_task.test/hospitals/delete/2",
+							"protocol": "http",
+							"host": [
+								"credoweb_task",
+								"test"
+							],
+							"path": [
+								"hospitals",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

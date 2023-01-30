@@ -1,0 +1,23 @@
+{
+    "name": "vurade/credoweb_task",
+    "description": "Web Development API Task",
+    "autoload": {
+        "psr-4": {
+            "Api\\": ""
+        }
+    },
+    "authors": [
+        {
+            "name": "Vladimir Dimitrov",
+            "email": "vl.dimitrov89@gmail.com"
+        }
+    ],
+    "require": {
+        "friendsofphp/php-cs-fixer": "^3.13",
+        "vlucas/phpdotenv": "^5.5",
+        "illuminate/database": "^8.83",
+        "pecee/simple-router": "4.3.7.2",
+        "rakit/validation": "^1.4",
+        "psr/http-message": "^1.0"
+    }
+}
