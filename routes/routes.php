@@ -12,12 +12,12 @@ SimpleRouter::get('/', function () {
 SimpleRouter::get('/users', [UsersController::class, 'index']);
 SimpleRouter::get('/users/{id}', [UsersController::class, 'show']);
 SimpleRouter::post('/users/create', [UsersController::class, 'store']);
-SimpleRouter::patch('/users/update/{id}', [UsersController::class, 'update']);
+SimpleRouter::post('/users/update/{id}', [UsersController::class, 'update']);
 SimpleRouter::delete('/users/delete/{id}', [UsersController::class, 'destroy']);
 
 //routes for hospitals
 SimpleRouter::get('/hospitals', [HospitalsController::class, 'index']);
 SimpleRouter::get('/hospitals/{id}', [HospitalsController::class, 'show']);
 SimpleRouter::post('/hospitals/create', [HospitalsController::class, 'store']);
-SimpleRouter::patch('/hospitals/update/{id}', [HospitalsController::class, 'update']);
+SimpleRouter::post('/hospitals/update/{id}', [HospitalsController::class, 'update']);
 SimpleRouter::delete('/hospitals/delete/{id}', [HospitalsController::class, 'destroy']);

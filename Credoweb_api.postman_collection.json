@@ -49,12 +49,93 @@
 					"response": []
 				},
 				{
+					"name": "Get User by First Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://credoweb_task.test/users?first_name=Vladimir",
+							"protocol": "http",
+							"host": [
+								"credoweb_task",
+								"test"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "first_name",
+									"value": "Vladimir"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by Last Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://credoweb_task.test/users?last_name=Dimitrov",
+							"protocol": "http",
+							"host": [
+								"credoweb_task",
+								"test"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "last_name",
+									"value": "Dimitrov"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Create User",
 					"request": {
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "test@test.com",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "Vladimir",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Dimitrov",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "workplace_id",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
 						"url": {
-							"raw": "http://credoweb_task.test/users/create?email=test@test.com&first_name=Vladimir&last_name=Dimitrov&type=1",
+							"raw": "http://credoweb_task.test/users/create",
 							"protocol": "http",
 							"host": [
 								"credoweb_task",
@@ -63,29 +144,6 @@
 							"path": [
 								"users",
 								"create"
-							],
-							"query": [
-								{
-									"key": "email",
-									"value": "test@test.com"
-								},
-								{
-									"key": "first_name",
-									"value": "Vladimir"
-								},
-								{
-									"key": "last_name",
-									"value": "Dimitrov"
-								},
-								{
-									"key": "type",
-									"value": "1"
-								},
-								{
-									"key": "workplace_id",
-									"value": null,
-									"disabled": true
-								}
 							]
 						}
 					},
@@ -94,10 +152,35 @@
 				{
 					"name": "Update User",
 					"request": {
-						"method": "PATCH",
+						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "test2@test1.com",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "Ivan",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Ivanov",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
 						"url": {
-							"raw": "http://credoweb_task.test/users/update/2?email=test1@test1.com&first_name=Ivan&last_name=Ivanov&type=1",
+							"raw": "http://credoweb_task.test/users/update/2",
 							"protocol": "http",
 							"host": [
 								"credoweb_task",
@@ -107,24 +190,6 @@
 								"users",
 								"update",
 								"2"
-							],
-							"query": [
-								{
-									"key": "email",
-									"value": "test1@test1.com"
-								},
-								{
-									"key": "first_name",
-									"value": "Ivan"
-								},
-								{
-									"key": "last_name",
-									"value": "Ivanov"
-								},
-								{
-									"key": "type",
-									"value": "1"
-								}
 							]
 						}
 					},
@@ -200,8 +265,28 @@
 					"request": {
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Test Hospital",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "This is a random address",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "0889000000",
+									"type": "text"
+								}
+							]
+						},
 						"url": {
-							"raw": "http://credoweb_task.test/hospitals/create?name=Test Hospital&address=This is a random address&phone=0889000000",
+							"raw": "http://credoweb_task.test/hospitals/create",
 							"protocol": "http",
 							"host": [
 								"credoweb_task",
@@ -210,20 +295,6 @@
 							"path": [
 								"hospitals",
 								"create"
-							],
-							"query": [
-								{
-									"key": "name",
-									"value": "Test Hospital"
-								},
-								{
-									"key": "address",
-									"value": "This is a random address"
-								},
-								{
-									"key": "phone",
-									"value": "0889000000"
-								}
 							]
 						}
 					},
@@ -232,10 +303,30 @@
 				{
 					"name": "Update Hospital",
 					"request": {
-						"method": "PATCH",
+						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Test Hospital updated",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "This is a random address",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "0889000000",
+									"type": "text"
+								}
+							]
+						},
 						"url": {
-							"raw": "http://credoweb_task.test/hospitals/update/4?name=Test Hospital updated&address=This is a random address&phone=0889000000",
+							"raw": "http://credoweb_task.test/hospitals/update/4",
 							"protocol": "http",
 							"host": [
 								"credoweb_task",
@@ -245,20 +336,6 @@
 								"hospitals",
 								"update",
 								"4"
-							],
-							"query": [
-								{
-									"key": "name",
-									"value": "Test Hospital updated"
-								},
-								{
-									"key": "address",
-									"value": "This is a random address"
-								},
-								{
-									"key": "phone",
-									"value": "0889000000"
-								}
 							]
 						}
 					},
