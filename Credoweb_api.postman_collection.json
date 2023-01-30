@@ -261,6 +261,31 @@
 					"response": []
 				},
 				{
+					"name": "Get Hospitals Ordered",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://credoweb_task.test/hospitals?userCountOrder=1",
+							"protocol": "http",
+							"host": [
+								"credoweb_task",
+								"test"
+							],
+							"path": [
+								"hospitals"
+							],
+							"query": [
+								{
+									"key": "userCountOrder",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Create Hospital",
 					"request": {
 						"method": "POST",
